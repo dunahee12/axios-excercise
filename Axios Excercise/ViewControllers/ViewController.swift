@@ -45,6 +45,8 @@ class ViewController: UIViewController {
     fileprivate func populateMovieArray() {
         if movieArray == nil {
             movieArray = NSMutableArray()
+        } else {
+            movieArray?.removeAllObjects()
         }
         
         let requestString = "https://api.themoviedb.org/3/discover/movie?api_key=1821c6b6049945b0e08619035590d15b&page=1"
